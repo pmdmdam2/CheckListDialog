@@ -1,13 +1,14 @@
 package checkitems.dialog.org.activities;
 
 import android.os.CountDownTimer;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import checkitems.dialog.org.checklistdialog.R;
@@ -26,8 +27,9 @@ public class CheckListActivity extends AppCompatActivity implements DialogRespon
     private ArrayList<CountDownTimer> timers;
     private boolean startLights;
     private CheckListDialog cld;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_list);
         cld = new CheckListDialog();
